@@ -14,7 +14,7 @@ declare -a SRV_URL=("***.ngrok.io" "io.th333boo.com")
 declare -a PORT("80" "443" "3338")
 declare -a TOOLS("python3" "tor" "git")
 
-## UPDATER SCRIPT SYSTEM
+## UPDATER SYSTEM
 git clone https://github.com/th333boo/r3dth1rth33n.git $PATH_INSTALL_FOLDER/
 git pull $PATH_INSTALL_FOLDER/r3dth1rth33n/
 chmod +x $PATH_INSTALL_FOLDER/r3dth1rth33n/installer-linux.sh | sh
