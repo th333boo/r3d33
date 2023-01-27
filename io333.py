@@ -4,11 +4,11 @@ import socket
 import time
 
 HOST,PORTS= "127.0.0.1",3338
-io = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 print("START SCANNING PORT")
 def PortScan(PORT):
     try:
+        io = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         status = False
         io.connect((HOST,PORT))
         try:
