@@ -1,4 +1,0 @@
-ed25519
-python-decouple
-scrapy
-scapy
