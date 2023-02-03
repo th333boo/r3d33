@@ -2,3 +2,6 @@ ed25519
 python-decouple
 scrapy
 scapy
+websockets
+SQLAlchemy
+python-telegram-bot
