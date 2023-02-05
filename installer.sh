@@ -9,11 +9,12 @@ HEADER="
 ### ### ### ### ### ### ### ### ###"
 
 PATH_INSTALL_FOLDER='/opt'
-declare -a USER=("noc" "th333boo")
-declare -a SRV_URL=("io.th333boo.com")
-declare -a PORT("80" "443" "3338")
-declare -a TOOLS("python3" "tor" "git" "pip3" "nginx")
-declare -a PIP_TOOLS("ed25519" "python-decouple" "scrapy")
+USER="th333boo"
+SRV_URL="io.th333boo.com"
+SRV_DEFAULT="127.0.0.1"
+PORT("80","443","3338")
+TOOLS("python3","tor","git","pip3","nginx")
+PIP_TOOLS("ed25519","python-decouple","scrapy")
 
 printf '\033[32m\nUPDATE OK \033[0m\n'
 echo "==============================="
@@ -64,9 +65,27 @@ server {
         error_log /var/log/nginx/$SRV_URL/error.log warn;
 }
 EOF
+tee /etc/nginx/conf.d/$SRV_DEFAULT > /dev/null << EOF
+## HTTPS CONFIG
+server {
+        listen 443 ssl http2;
+        listen [::]:443 ssl http2;
+        server_name _ ;
+
+        root /var/www/;
+        index index.html;
+
+        ssl_certificate /etc/ssl/certs/ssl-cert-snakeoil.pem;
+        ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+
+        access_log /var/log/nginx/access.log;
+        error_log /var/log/nginx/error.log warn;
+}
+EOF
 printf '\033[32m\nTOR INSTALL FINISHED \033[0m\n'
 echo "==============================="
 ## TOR PROXY INSTALL
+apt install tor
 
 printf '\033[32m\nTOR CONFIG FINISHED \033[0m\n'
 echo "==============================="

