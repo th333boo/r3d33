@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from scapy.all import *
 filter = "udp port 53"
+load_layer()
 
 def process_dns(packet):
     dns = packet[DNS]
@@ -22,5 +23,4 @@ def process_dns(packet):
             ans = packet[0][i+4]
             print('Response{0}: {1} ({2})'.format(i, ans.rrname, ans.rdata))
             i += 1
-
 sniff(filter=filter, prn=process_dns)
