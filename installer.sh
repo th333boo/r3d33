@@ -94,3 +94,6 @@ echo "==============================="
 printf '\033[32m\nSPAM SYSTEM INSTALL FINISHED \033[0m\n'
 echo "==============================="
 ## SPAM SYSTEM
+
+printf '\033[32m\nDATABASE INSTALL FINISHED \033[0m\n'
+echo "==============================="
