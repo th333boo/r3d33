@@ -12,7 +12,8 @@ class FootPrint ():
         self.IP_GW = "192.168.1.1"
         self.IP_SRC = config('IP_SRC')
         self.IP_DST = config('IP_DST')
-
+        return self
+    print(__self__.__format__)
     print('### [ FOOTPRINT CLEANER ] ###')
     def FootPrintClean(self,HW_SRC,HW_DST,IP_DST,IP_GW,IP_SRC,Ether,IP,FRAME_IP,FRAME):
         print('# [ BEFORE ] #')
@@ -25,4 +26,5 @@ class FootPrint ():
         FRAME_IP = IP(src=IP_SRC, dst=IP_DST, ttl=(111), frag=0, tos=0x0)
         FRAME.show()
         FRAME_IP.show()
-FootPrint()
+    FootPrintClean()
+
