@@ -3,4 +3,5 @@ from decouple import config
 from scapy.all import *
 
 print('### [ NETWORK CARD ] ###')
-print(get_if_list())
+for i in range(len(get_if_list())):
+    print(i + 1, get_if_list()[i])
