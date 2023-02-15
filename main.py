@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
+from server.websocket import TB_WebSocket
+print('### [ WEB SOCKET ] ###')
+TB_WebSocket()
+print(TB_WebSocket())
 
 from server.ios import IO_SecureSocket
-print('### [ WEB SERVER ] ###')
+print('### [ SECURE SOCKET ] ###')
 IO_SecureSocket()
 print(IO_SecureSocket())
 
@@ -10,10 +14,7 @@ print('### [ WEB SERVER ] ###')
 TB_HTTPServer()
 print(TB_HTTPServer())
 
-from server.websocket import TB_WebSocket
-print('### [ WEB SOCKET ] ###')
-TB_WebSocket()
-print(TB_WebSocket())
+
 
 from kit.public_ip import PUBLIC_IP
 print('### [ PUBLIC IP ] ###')
