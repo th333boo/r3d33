@@ -7,7 +7,7 @@ PAYLOAD=''
 class TB_HTTPServer(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == '/':
-            self.path = '/static/index.html'
+           self.path = './static/index.html'
         try:
             file_to_open = open(self.path[1:]).read()
             self.send_response(200)
@@ -15,6 +15,7 @@ class TB_HTTPServer(BaseHTTPRequestHandler):
             self.end_headers()
         except:
             file_to_open = 'Not found'
+            self.send_head()
             self.send_response(404)
         self.wfile.write(bytes(file_to_open,FORMAT))
 
