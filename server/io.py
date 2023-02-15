@@ -1,6 +1,6 @@
 import socket 
 
-HOST,PORT = "127.0.0.1",3336
+HOST,PORT = "127.0.0.1",3333
 
 print(f"Connecting to the server: {HOST} on port: {PORT}")
 
