@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from http.server import HTTPServer,BaseHTTPRequestHandler
 
-HOST,PORT = "127.0.0.1",3339
+HOST,PORT = "127.0.0.1",3333
 FORMAT = "utf-8"
 PAYLOAD=''
 
