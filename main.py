@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# coding: utf-8
+
 print('### [ WEB SERVER ] ###')
 from server.webserver import TB_HTTPServer
 TB_HTTPServer()

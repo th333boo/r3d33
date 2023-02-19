@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# coding: utf-8
+
 from decouple import config
 from scapy.all import *
 from footprint_custom import FootPrint

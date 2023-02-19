@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
+# coding: utf-8
+
 from decouple import config
-import telegram
 from telegram.ext import CommandHandler, ContextTypes, Updater, ApplicationBuilder
 
 TOKEN = config('TELEGRAM_API_KEY')
 
 print('### [ BOT is running ] ###')
-async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+async def start(update: Updater, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(f'Hello {update.effective_user.first_name} and welcome')
 
-async def contact(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+async def contact(update: Updater, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(f'Hello {update.effective_user.first_name}, you can get in touch @th333boo')
 
-async def help(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+async def help(update: Updater, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text("""
     Current commands available:
 

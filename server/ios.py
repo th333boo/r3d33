@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
+# coding: utf-8
+
 from decouple import config
-import socket
+import socket 
 import threading 
 
 class IO_SecureSocket():

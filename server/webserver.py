@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# coding: utf-8
+
 from http.server import HTTPServer,BaseHTTPRequestHandler
 
 HOST,PORT = "127.0.0.1",3333
@@ -26,4 +28,4 @@ except Exception as e:
     print(e)
     webserver.socket.close()
 
-TB_HTTPServer().do_GET()
+TB_HTTPServer.do_GET()

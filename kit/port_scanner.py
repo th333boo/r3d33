@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# coding: utf-8
+
 from scapy.all import *
 
 print("### [ PORT SCANNING ] ###")
