@@ -5,3 +5,6 @@ scapy
 websockets
 SQLAlchemy
 python-telegram-bot
+dnslib
+pymetasploit3
+wget
