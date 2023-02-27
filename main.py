@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 # coding: utf-8
+import threading
 
 print('### [ WEB SERVER ] ###')
 from server.webserver import TB_HTTPServer
-TB_HTTPServer()
+def WebStarter():
+    while True:
+        web = TB_HTTPServer()
+        t1 = threading.Thread(target=web.do_GET)
+        t1.start()
 print(TB_HTTPServer())
 
 print('### [ WEB SOCKET ] ###')
