@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
+from decouple import config
 from scapy.all import *
 
+IP_SRC = config('IP_SRC')
+IP_DST = config('IP_DST')
+IP_GW = config('IP_GW')
+
+from footprint_custom import FRAME
 print('### [ ARP TAKEOVER ] ###')
 def get_mac(IP_DST):
     print('# [ ARP INFO ] #')
