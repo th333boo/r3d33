@@ -12,9 +12,8 @@ PATH_INSTALL_FOLDER='/opt'
 USER="th333boo"
 SRV_URL="io.th333boo.com"
 SRV_DEFAULT="127.0.0.1"
-PORT=("80","443","3338")
+PORT=("80","443","3333")
 TOOLS=("python3","tor","git","pip3","nginx")
-PIP_TOOLS=("ed25519","python-decouple","scrapy")
 
 printf '\033[32m\nUPDATE OK \033[0m\n'
 echo "==============================="
@@ -32,10 +31,10 @@ cat $HEADER
 
 printf '\033[32m\nUSER CREATED \033[0m\n'
 echo "==============================="
-## CREATE USER MACHINE
-for str in ${USER[@]};
-do useradd ${USER[@]} -m -s /bin/bash -d "/home/${$USER[$str]}/"
-
+# ## CREATE USER MACHINE
+# for str in ${USER[@]};
+# do useradd ${USER[@]} -m -s /bin/bash -d "/home/${$USER[$str]}/"
+useradd $USER -m -s /bin/bash -d "/home/$USER/"
 printf '\033[32m\nTOOLS INSTALL FINISHED \033[0m\n'
 echo "==============================="
 ## INSTALL TOOLS
