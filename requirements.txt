@@ -8,3 +8,4 @@ python-telegram-bot
 dnslib
 pymetasploit3
 wget
+setuptools
