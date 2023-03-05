@@ -2,13 +2,16 @@
 # coding: utf-8
 import threading
 
+print('### [ FOOTPRINT CUSTOM ] ###')
+from kit.footprint_custom import TB_FootPrintCustom
+print(TB_FootPrintCustom())
+
+print('### [ SCANNER ] ###')
+from kit.scanner import TB_Scanner
+print(TB_Scanner())
+
 print('### [ WEB SERVER ] ###')
 from server.webserver import TB_HTTPServer
-def WebStarter():
-    while True:
-        web = TB_HTTPServer()
-        t1 = threading.Thread(target=web.do_GET)
-        t1.start()
 print(TB_HTTPServer())
 
 print('### [ WEB SOCKET ] ###')
