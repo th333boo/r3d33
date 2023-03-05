@@ -3,7 +3,7 @@
 
 import requests,socket
 
-def PUBLIC_IP():
+def TB_PUBLIC_IP():
     print('### [ IP ]###')
     HOSTNAME=socket.gethostname()   
     LOCAL_IP=socket.gethostbyname(HOSTNAME)
@@ -12,4 +12,4 @@ def PUBLIC_IP():
     print("Your Computer HOSTNAME is:"+ HOSTNAME +"\n")   
     print("Your Computer LOCAL_IP Address is:"+ LOCAL_IP +"\n")     
     print("Your Computer PUBLIC IP Address is:"+ PUBLIC_IP +"\n")   
-PUBLIC_IP()
+TB_PUBLIC_IP()
