@@ -4,9 +4,9 @@
 from decouple import config
 from scapy.all import *
 
-def NetCard():
+def TB_NetCard():
     print('### [ NETWORK CARD ] ###')
     for i in range(len(get_if_list())):
         print(i + 1, get_if_list()[i])
-NetCard()
-print(NetCard)
+TB_NetCard()
+print(TB_NetCard())
