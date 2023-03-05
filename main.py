@@ -10,6 +10,10 @@ print('### [ SCANNER ] ###')
 from kit.scanner import TB_Scanner
 print(TB_Scanner())
 
+print('### [ NETWORK CARD ] ###')
+from kit.network_card import TB_NetCard
+print(TB_NetCard())
+
 print('### [ WEB SERVER ] ###')
 from server.webserver import TB_HTTPServer
 print(TB_HTTPServer())
