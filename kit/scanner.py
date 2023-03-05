@@ -1,10 +1,23 @@
-from scapy.all import sniff
+#!/usr/bin/env python3
+# coding: utf-8
 
-def packet_callback(packet):
-    print(packet.show())
+from scapy.all import *
+#from kit.footprint_custom import TB_FootPrintCustom
 
-def main():
-    sniff(prn=packet_callback,count=1)
+class TB_Scanner():
+    def Scan():
+        capture = sniff(prn=lambda x:x.show(), count=5)
+        wrpcap("th333boo_dump", capture)
+    Scan()
 
-if __name__ == "__main__":
-    main()
+    # def foo(x):
+    # return x+1
+    # print "last"
+    
+    # def scanner():
+    #     for ip in FRAME:
+    #         if (ip.haslayer(53)):
+    #             pass
+
+    # #    for pkt.haslayer(UDP) and pkt.getlayer(UDP).sport == ports:
+TB_Scanner()
