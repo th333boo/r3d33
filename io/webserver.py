@@ -1,8 +1,16 @@
 #!/usr/bin/env python3
 from http.server import HTTPServer,BaseHTTPRequestHandler
-HOST,PORT = "127.0.0.1",3339
+HOST,PORT = "127.0.0.1",443
 FORMAT = "utf-8"
 PAYLOAD=''
+
+class TB_SSLWraper():
+    import ssl
+    httpd = HTTPServer((HOST,PORT), BaseHTTPRequestHandler)
+    httpd.socket = ssl.wrap_socket (httpd.socket, 
+            keyfile="", 
+            certfile='', server_side=True)
+    httpd.serve_forever()
 
 class TB_HTTPServer(BaseHTTPRequestHandler):
     def do_GET(self):
