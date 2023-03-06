@@ -13,6 +13,7 @@ class TB_SSLWraper():
     httpd.serve_forever()
 
 class TB_HTTPServer(BaseHTTPRequestHandler):
+    pass
 TB_HTTPServer()
 
 #     def do_GET(self):
