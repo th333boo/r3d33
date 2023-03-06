@@ -4,6 +4,11 @@
 from decouple import config
 from scapy.all import *
 
+HW_SRC=str(config('HW_SRC'))
+HW_DST=str(config('HW_DST'))
+IP_SRC=str("8.2.246.1")
+IP_DST=str("8.3.11.1")
+
 class TB_FootPrintCustom ():
     print('### [ FOOTPRINT CUSTOM ] ###')
     def __init__(self,HW_SRC=str(config('HW_SRC')),HW_DST=str(config('HW_DST')),IP_SRC=str("8.2.246.1"),IP_DST=str("8.3.11.1")):
