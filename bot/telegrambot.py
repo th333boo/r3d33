@@ -29,7 +29,7 @@ app = ApplicationBuilder().token(TOKEN).build()
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("contact", contact))
 app.add_handler(CommandHandler("help", help))
-app.run_polling()
+# app.run_polling()
 
 # async def hello(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 #     await update.message.reply_text(f'Hello {update.effective_user.first_name}')
