@@ -9,3 +9,4 @@ dnslib
 pymetasploit3
 wget
 setuptools
+crypto
