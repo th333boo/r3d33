@@ -23,10 +23,6 @@ async def th333booWebSoc():
  #       await asyncio.get_event_loop().run_until_complete(th333booWebSoc)
         await asyncio.Future()
 
-if __name__ == "__main__":
-    asyncio.run(th333booWebSoc())
-    asyncio.Future()  # run forever
-    # asyncio.get_event_loop().run_forever()
 
 # async def th333booWebSoc():
 #     async with websockets.connect("ws://localhost:8765") as websocket:
